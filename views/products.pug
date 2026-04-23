@@ -1,0 +1,148 @@
+extends layout
+
+block content
+    section.page-header
+        .container
+            h1 Our Products
+            p.lead Browse our exquisite collection of premium vehicles from world-class brands.
+
+    section.products-section
+        .container
+            .product-filters
+                button.filter-btn.active(data-category="all") All Brands
+                button.filter-btn(data-category="toyota") Toyota
+                button.filter-btn(data-category="mercedes") Mercedes-Benz
+                button.filter-btn(data-category="bmw") BMW
+                button.filter-btn(data-category="honda") Honda
+                button.filter-btn(data-category="ford") Ford
+
+            .product-grid
+                // Toyota
+                .product-card(data-category="toyota")
+                    .product-img
+                        img(src="/images/sedan.png", alt="Toyota Camry")
+                    .product-info
+                        h3 Toyota Camry
+                        p The benchmark for reliability and refined performance.
+                        span.price $35,000
+                        button.btn.btn-sm.view-details-btn(
+                            data-title="Toyota Camry"
+                            data-brand="Toyota"
+                            data-price="$35,000"
+                            data-engine="2.5L 4-Cylinder"
+                            data-hp="203 HP"
+                            data-desc="The Toyota Camry continues to be the gold standard for mid-size sedans, combining exceptional fuel efficiency with a smooth, composed ride and legendary reliability."
+                            data-brand-info="Toyota is a global leader in automotive innovation, known for pioneering hybrid technology and building vehicles that stand the test of time."
+                        ) View Details
+                
+                // Mercedes-Benz
+                .product-card(data-category="mercedes")
+                    .product-img
+                        img(src="/images/sedan.png", alt="Mercedes S-Class")
+                    .product-info
+                        h3 Mercedes-Benz S-Class
+                        p The pinnacle of luxury and automotive engineering.
+                        span.price $110,000
+                        button.btn.btn-sm.view-details-btn(
+                            data-title="Mercedes-Benz S-Class"
+                            data-brand="Mercedes-Benz"
+                            data-price="$110,000"
+                            data-engine="3.0L Inline-6 Turbo"
+                            data-hp="429 HP"
+                            data-desc="The S-Class is the flagship of the Mercedes-Benz lineup, offering unparalleled luxury, cutting-edge technology, and a presence that is second to none."
+                            data-brand-info="Mercedes-Benz is synonymous with 'The Best or Nothing,' representing over a century of German engineering excellence and luxury leadership."
+                        ) View Details
+
+                // BMW
+                .product-card(data-category="bmw")
+                    .product-img
+                        img(src="/images/sedan.png", alt="BMW M5")
+                    .product-info
+                        h3 BMW M5
+                        p Blistering performance meet everyday practicality.
+                        span.price $105,000
+                        button.btn.btn-sm.view-details-btn(
+                            data-title="BMW M5"
+                            data-brand="BMW"
+                            data-price="$105,000"
+                            data-engine="4.4L V8 Twin-Turbo"
+                            data-hp="600 HP"
+                            data-desc="The BMW M5 is a masterpiece of precision, blending supercar performance with the refinement of a luxury executive sedan."
+                            data-brand-info="BMW (Bayerische Motoren Werke) is dedicated to creating 'The Ultimate Driving Machine,' focusing on driving dynamics, precision, and sportiness."
+                        ) View Details
+
+                // Honda
+                .product-card(data-category="honda")
+                    .product-img
+                        img(src="/images/suv.png", alt="Honda CR-V")
+                    .product-info
+                        h3 Honda CR-V
+                        p Versatile, comfortable, and built for your family's next adventure.
+                        span.price $32,000
+                        button.btn.btn-sm.view-details-btn(
+                            data-title="Honda CR-V"
+                            data-brand="Honda"
+                            data-price="$32,000"
+                            data-engine="1.5L Turbocharged"
+                            data-hp="190 HP"
+                            data-desc="The Honda CR-V is a versatile SUV that offers a spacious interior, advanced safety features, and a smooth driving experience for any journey."
+                            data-brand-info="Honda is globally recognized for its engineering simplicity, fuel efficiency, and commitment to creating mobility for everyone."
+                        ) View Details
+
+                // Ford
+                .product-card(data-category="ford")
+                    .product-img
+                        img(src="/images/suv.png", alt="Ford Mustang Mach-E")
+                    .product-info
+                        h3 Mustang Mach-E
+                        p The electric soul of a legend. Zero emissions, pure Mustang.
+                        span.price $55,000
+                        button.btn.btn-sm.view-details-btn(
+                            data-title="Mustang Mach-E"
+                            data-brand="Ford"
+                            data-price="$55,000"
+                            data-engine="Dual Motor AWD (Electric)"
+                            data-hp="346 HP"
+                            data-desc="The Mustang Mach-E reimagines the legendary pony car for the electric age, offering thrilling acceleration and state-of-the-art tech."
+                            data-brand-info="Ford is an American icon that revolutionized the automotive industry with the assembly line and continues to lead with powerful trucks and electric innovations."
+                        ) View Details
+
+    // Modal Structure
+    #productModal.modal
+        .modal-content
+            span.close-modal &times;
+            .modal-image
+                img#modalImg(src="", alt="")
+            .modal-details
+                .modal-brand#modalBrand
+                h2#modalTitle
+                .modal-price#modalPrice
+                
+                .details-content-grid
+                    .details-main
+                        .modal-specs
+                            .spec-item
+                                i.fas.fa-car
+                                span#modalEngine
+                            .spec-item
+                                i.fas.fa-bolt
+                                span#modalHP
+                        
+                        .modal-features
+                            h4 Key Features
+                            ul#modalFeatures
+                                li Premium Leather Interior
+                                li Panoramic Sunroof
+                                li Advanced Driver Assistance
+                                li Smart Connectivity
+                    
+                    .details-story
+                        .modal-description
+                            h4 About the Vehicle
+                            p#modalDesc
+                        
+                        .modal-brand-story
+                            h4 About the Brand
+                            p#modalBrandInfo
+                
+                button.btn.btn-primary.modal-cta Contact for Inquiry

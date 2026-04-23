@@ -1,0 +1,49 @@
+extends layout
+
+block content
+    section.page-header
+        .container
+            h1 Our Services
+            p.lead Professional care for your premium vehicle.
+
+    section.services-list
+        .container
+            .services-grid
+                .service-card
+                    i.fas.fa-tools
+                    h3 Maintenance & Repair
+                    p Regular servicing and expert repairs to keep your car in top condition.
+                    a.btn.btn-text.learn-more-service(href="#", data-title="Maintenance & Repair", data-desc="Our world-class technicians use genuine parts and state-of-the-art diagnostic equipment to ensure your Exodus vehicle performs at its peak. From routine oil changes to complex transmission work, we handle it all with precision.") Learn More
+                .service-card
+                    i.fas.fa-shield-alt
+                    h3 Extended Warranty
+                    p Comprehensive coverage plans for peace of mind on every journey.
+                    a.btn.btn-text.learn-more-service(href="#", data-title="Extended Warranty", data-desc="Drive with confidence knowing you're protected. Our extended warranty plans cover major mechanical and electrical components, including 24/7 support and nationwide coverage at authorized service centers.") Learn More
+                .service-card
+                    i.fas.fa-car-side
+                    h3 Test Drives
+                    p Experience the thrill of driving an Exodus model before you buy.
+                    a.btn.btn-text.learn-more-service(href="#", data-title="Test Drives", data-desc="Schedule a personalized test drive experience. Choose your preferred model and take it for a spin through curated routes that showcase its performance, comfort, and advanced technology features.") Learn More
+                .service-card
+                    i.fas.fa-hand-holding-usd
+                    h3 Flexible Financing
+                    p Tailored financial solutions to help you drive your dream car sooner.
+                    a.btn.btn-text.learn-more-service(href="#", data-title="Flexible Financing", data-desc="Our finance experts work with leading institutions to offer competitive rates and flexible terms. Whether you prefer leasing or traditional financing, we'll find the perfect plan for your lifestyle.") Learn More
+                .service-card
+                    i.fas.fa-sync-alt
+                    h3 Trade-In Programs
+                    p Get the best value for your current vehicle when you upgrade to an Exodus.
+                    a.btn.btn-text.learn-more-service(href="#", data-title="Trade-In Programs", data-desc="Upgrade seamlessly. We provide transparent appraisals and top market value for your current vehicle, applying the trade-in equity directly toward your new Exodus purchase.") Learn More
+                .service-card
+                    i.fas.fa-headset
+                    h3 Roadside Assistance
+                    p 24/7 support wherever your travels take you.
+                    a.btn.btn-text.learn-more-service(href="#", data-title="Roadside Assistance", data-desc="Never travel alone. Our comprehensive roadside assistance includes emergency towing, flat tire changes, battery jump-starts, and fuel delivery, available 24/7 across the continent.") Learn More
+
+    .service-overlay#serviceOverlay
+        .service-overlay-content
+            .close-service-overlay &times;
+            h2#serviceOverlayTitle
+            .line(style="margin-bottom: 25px;")
+            p#serviceOverlayDesc
+            button.btn.btn-primary.close-service-btn(style="margin-top: 30px;") Close Details

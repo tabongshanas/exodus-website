@@ -1,0 +1,89 @@
+extends layout
+
+block content
+    section.hero
+        .hero-video-container
+            video#heroVideo(autoplay, muted, loop, playsinline)
+                source(src="https://assets.mixkit.co/videos/preview/mixkit-car-driving-on-a-road-1183-large.mp4", type="video/mp4")
+        .hero-overlay
+        .container
+            .hero-content
+                h1 Drive the Future of Excellence
+                p Experience the pinnacle of automotive engineering and luxury with Exodus Motors.
+                .hero-btns
+                    a.btn.btn-primary(href="/products") Explore Our Products
+                    a.btn.btn-secondary(href="/services") Discover Our Services
+
+    section.intro
+        .container
+            .intro-grid
+                .intro-content
+                    .section-header(style="text-align: left; margin-bottom: 20px;")
+                        h2 Welcome to Exodus Motors
+                        .line(style="margin: 0;")
+                    p We are more than just a car company. We are a team of visionary engineers and designers dedicated to pushing the boundaries of what's possible on the road. From high-performance sedans to eco-friendly SUVs, every vehicle we offer is a masterpiece of innovation.
+                    a.btn.btn-outline(href="/about" style="margin-top: 20px; display: inline-block;") Learn More About Us
+                .intro-image
+                    img(src="/images/hero.png", alt="Automotive Innovation")
+
+    section.featured-products
+        .container
+            .section-header
+                h2 Featured Products
+                p Discover our most popular models
+                .line
+            .product-grid
+                .product-card
+                    .product-img
+                        img(src="/images/sedan.png", alt="Luxury Sedan")
+                    .product-info
+                        h3 Exodus S-Class
+                        p The ultimate expression of luxury and performance.
+                        span.price Starting at $85,000
+                        a.btn.btn-sm(href="/products") View Features
+                .product-card
+                    .product-img
+                        img(src="/images/suv.png", alt="Premium SUV")
+                    .product-info
+                        h3 Exodus X-Terra
+                        p Adventure awaits with unmatched comfort and safety.
+                        span.price Starting at $72,000
+                        a.btn.btn-sm(href="/products") View Features
+
+    section.brands
+        .container
+            .section-header
+                h2 Luxury Brands We Showcase
+                .line
+            .brand-grid
+                .brand-item
+                    i.fas.car
+                    h3 Toyota
+                    p Reliability meets innovation in every model.
+                .brand-item
+                    i.fas.car
+                    h3 Mercedes-Benz
+                    p The best or nothing. Pure luxury and class.
+                .brand-item
+                    i.fas.car
+                    h3 BMW
+                    p The ultimate driving machine. Engineering perfection.
+                .brand-item
+                    i.fas.car
+                    h3 Honda
+                    p Practicality and performance for the modern driver.
+                .brand-item
+                    i.fas.car
+                    h3 Ford
+                    p Built tough for the road ahead.
+
+    section.newsletter
+        .container
+            .newsletter-grid
+                .newsletter-text
+                    h2 Stay Updated
+                    p Join our newsletter for the latest automotive news and exclusive offers.
+                .newsletter-form
+                    form.subscribe-form
+                        input(type="email", placeholder="Enter your email address", required)
+                        button.btn.btn-primary(type="submit") Subscribe

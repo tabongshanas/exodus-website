@@ -1,0 +1,71 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title= title
+        link(rel="stylesheet", href="/css/style.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css")
+        link(rel="preconnect", href="https://fonts.googleapis.com")
+        link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap", rel="stylesheet")
+    body
+        .scroll-progress#scrollProgress
+        header.navbar
+            .container
+                a.logo(href="/")
+                    img(src="/images/logo.png", alt="Exodus Motors Logo")
+                    span Exodus Motors
+                .nav-group
+                    nav.nav-links
+                        .mobile-close
+                            i.fas.fa-times
+                        a(href="/") Home
+                        a(href="/about") About
+                        a(href="/products") Products
+                        a(href="/services") Services
+                        a(href="/contact") Contact
+                    button.theme-toggle#themeToggle
+                        i.fas.fa-moon
+                    .mobile-menu-btn
+                        i.fas.fa-bars
+
+        main
+            block content
+
+        footer
+            .container
+                .footer-grid
+                    .footer-info
+                        h3 Exodus Motors
+                        p Redefining mobility with premium automotive excellence.
+                        .social-links
+                            a(href="#")
+                                i.fab.fa-facebook-f
+                            a(href="#")
+                                i.fab.fa-twitter
+                            a(href="#")
+                                i.fab.fa-instagram
+                            a(href="#")
+                                i.fab.fa-linkedin-in
+                            a(href="#")
+                                i.fab.fa-youtube
+                            a(href="#")
+                                i.fab.fa-tiktok
+                    .footer-links
+                        h4 Quick Links
+                        ul
+                            li: a(href="/") Home
+                            li: a(href="/about") About Us
+                            li: a(href="/products") Products
+                            li: a(href="/services") Services
+                            li: a(href="/contact") Contact
+                    .footer-contact
+                        h4 Contact Us
+                        p 123 Luxury Way, Beverly Hills, CA
+                        p +237 695 73 98 44
+                        p info@exodusmotors.com
+                .footer-bottom
+                    p &copy; 2026 Exodus Motors. All rights reserved.
+
+        script(src="/js/script.js")
